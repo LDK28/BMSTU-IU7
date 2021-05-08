@@ -1,0 +1,130 @@
+********************************************************************************
+***                            Micro-Cap 10.2.0.0                            ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of LR5                         ***
+***                           27.11.2020 17:09:04                            ***
+********************************************************************************
+Limits
+======
+Time Range           8m
+Maximum Time Step    1u
+Number of Points     5100
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1           510.407m  2           908.773m  3            12.000  
+4           510.407m  5           908.773m 
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1             Q2
+Using model:          2N915          2N915
+
+Beta Terms:
+BETADC              52.832         52.832 
+BETAAC             124.918        124.918 
+
+Capacitance Terms:
+CPI                468.780p       468.780p
+CMU                  5.513p         5.513p
+CBX                  0.000          0.000 
+CJS                  0.000          0.000 
+
+Conductance Terms:
+GM                 359.114m       359.114m
+
+Current Terms:
+IB                 217.475u       217.475u
+IC                  11.490m        11.490m
+
+Resistance Terms:
+RPI                347.850        347.850 
+RX                   0.000          0.000 
+RO                   7.913K         7.913K
+
+Voltage Terms:
+VBE                908.773m       908.773m
+VBC                398.366m       398.366m
+VCE                510.407m       510.407m
+
+Frequency Terms:
+FT               120.505MEG     120.505MEG
+
+Power DC Terms:
+PD                   6.062m         6.062m
+PS                   0.000          0.000 
+
+DC Pin Currents:
+Ib                 217.475u       217.475u
+Ic                  11.490m        11.490m
+Ie                 -11.707m       -11.707m
+Is                   0.000          0.000 
+
+Condition:
+State                   LIN            LIN
+
+Device Variables:
+area                 1.000          1.000 
+vbe                  0.000          0.000 
+vce                  0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R2             R1             R3             R4
+V                    11.091         11.490         11.091         11.490 
+Power DC Terms:
+PD                    2.412m       132.011m         2.412m       132.011m
+
+DC Pin Currents:
+Ir                  217.475u        11.490m       217.475u        11.490m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2
+V                   398.366m      -398.366m
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V2
+V                   12.000 
+Power DC Terms:
+PG                 280.970m
+
+DC Pin Currents:
+ISource            -23.414m
+
+
