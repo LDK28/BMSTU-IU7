@@ -27,17 +27,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS} -std=c++1y")
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Charts REQUIRED)
+#target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Charts)
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        circle.cpp
         circle.h
-        draw.cpp
+        circle.cpp
         draw.h
-        ellips.cpp
+        draw.cpp
         ellips.h
+        ellips.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -68,4 +73,3 @@ set_target_properties(lab04 PROPERTIES
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(lab04)
 endif()
-

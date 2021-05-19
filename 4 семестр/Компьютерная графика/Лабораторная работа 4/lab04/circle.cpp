@@ -1,21 +1,23 @@
 #include "circle.h"
 
-void canonicalCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r)
+void canonicalCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r, int flag)
 {
     for (long x = 0; x <= r; ++x)
     {
         long y = round(sqrt(r * r - x * x));
-        draw(scene, color, cx, cy, x, y);
+        if (flag)
+            draw(scene, color, cx, cy, x, y);
     }
 
     for (long y = 0; y <= r; ++y)
     {
         long x = round(sqrt(r * r - y * y));
-        draw(scene, color, cx, cy, x, y);
+        if (flag)
+            draw(scene, color, cx, cy, x, y);
     }
 }
 
-void parametricCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r)
+void parametricCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r, int flag)
 {
 
     long l = round(M_PI * r / 2);
@@ -24,11 +26,12 @@ void parametricCircle(QGraphicsScene *scene, QPen color, double cx, double cy, d
         long x = round(r * cos(i / r));
         long y = round(r * sin(i / r));
 
-        draw(scene, color, cx, cy, x, y);
+        if (flag)
+            draw(scene, color, cx, cy, x, y);
     }
 }
 
-void bresenhamCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r)
+void bresenhamCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r, int flag)
 {
     long x = 0;
     double y = r;
@@ -36,7 +39,8 @@ void bresenhamCircle(QGraphicsScene *scene, QPen color, double cx, double cy, do
 
     while (y >= 0)
     {
-        draw(scene, color, cx, cy, x, y);
+        if (flag)
+            draw(scene, color, cx, cy, x, y);
 
         if (d < 0)  // пиксель лежит внутри окружности
         {
@@ -77,14 +81,18 @@ void bresenhamCircle(QGraphicsScene *scene, QPen color, double cx, double cy, do
     }
 }
 
-void midPointCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r)
+void midPointCircle(QGraphicsScene *scene, QPen color, double cx, double cy, double r, int flag)
 {
 
     long x = 0;
     double y = r;
     double p = 1 - r;  // (x + 1)^2 + (y - 1/2)^2 - r^2 // p = (x + 1)^2 + (y - 1/2)^2 - r^2
-    draw(scene, color, cx, cy, x, y);
-    draw(scene, color, cx, cy, y, x);
+
+    if (flag)
+    {
+        draw(scene, color, cx, cy, x, y);
+        draw(scene, color, cx, cy, y, x);
+    }
 
     while (x < y)
     {
@@ -97,7 +105,10 @@ void midPointCircle(QGraphicsScene *scene, QPen color, double cx, double cy, dou
             p += 2 * x - 2 * y + 1;
         }
 
-        draw(scene, color, cx, cy, x, y);
-        draw(scene, color, cx, cy, y, x);
+        if (flag)
+        {
+            draw(scene, color, cx, cy, x, y);
+            draw(scene, color, cx, cy, y, x);
+        }
     }
 }

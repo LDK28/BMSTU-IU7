@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1458</width>
-    <height>780</height>
+    <width>1442</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>20</y>
+      <x>274</x>
+      <y>9</y>
       <width>1151</width>
       <height>701</height>
      </rect>
@@ -27,100 +27,17 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>16</x>
-      <y>33</y>
-      <width>261</width>
-      <height>200</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_9">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Метод</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="radioButton">
-           <property name="text">
-            <string>Каноническое уравнение</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_2">
-           <property name="text">
-            <string>Параметрическое уравнение</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_3">
-           <property name="text">
-            <string>Алгоритм Брезенхема</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_4">
-           <property name="text">
-            <string>Алгоритм средней точки</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_5">
-           <property name="text">
-            <string>Библиотечная функция</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Цвет пера</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Цвет фона</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>16</x>
-      <y>241</y>
+      <x>10</x>
+      <y>230</y>
       <width>261</width>
       <height>438</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_11">
+    <layout class="QVBoxLayout" name="verticalLayout_12">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
+      <layout class="QVBoxLayout" name="verticalLayout_13">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="label_14">
          <property name="text">
           <string>Фигура</string>
          </property>
@@ -130,16 +47,16 @@
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout">
+        <layout class="QVBoxLayout" name="verticalLayout_14">
          <item>
-          <widget class="QRadioButton" name="radioButton_6">
+          <widget class="QRadioButton" name="radioButton6">
            <property name="text">
             <string>Окружность</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_7">
+          <widget class="QRadioButton" name="radioButton7">
            <property name="text">
             <string>Эллипс</string>
            </property>
@@ -148,30 +65,30 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="label_15">
            <property name="text">
             <string>X</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="label_16">
            <property name="text">
             <string>Y</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="label_17">
            <property name="text">
             <string>R</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="label_18">
            <property name="text">
             <string>R2</string>
            </property>
@@ -180,27 +97,27 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="lineEdit1">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="lineEdit2"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="lineEdit3"/>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="lineEdit4"/>
          </item>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButto3">
          <property name="text">
           <string>Построить</string>
          </property>
@@ -209,9 +126,9 @@
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_8">
+      <layout class="QVBoxLayout" name="verticalLayout_15">
        <item>
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="label_19">
          <property name="text">
           <string>Спектр</string>
          </property>
@@ -221,32 +138,32 @@
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_7">
+        <layout class="QVBoxLayout" name="verticalLayout_16">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
-            <widget class="QLabel" name="label_7">
+            <widget class="QLabel" name="label_20">
              <property name="text">
               <string>X</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="label_21">
              <property name="text">
               <string>Y</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_9">
+            <widget class="QLabel" name="label_22">
              <property name="text">
               <string>R1</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_10">
+            <widget class="QLabel" name="label_23">
              <property name="text">
               <string>R2</string>
              </property>
@@ -257,38 +174,38 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
+        <layout class="QVBoxLayout" name="verticalLayout_17">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
            <item>
-            <widget class="QLineEdit" name="lineEdit_5">
+            <widget class="QLineEdit" name="lineEdit5">
              <property name="text">
               <string/>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_6"/>
+            <widget class="QLineEdit" name="lineEdit6"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_7"/>
+            <widget class="QLineEdit" name="lineEdit7"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_8"/>
+            <widget class="QLineEdit" name="lineEdit8"/>
            </item>
           </layout>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
-            <widget class="QLabel" name="label_11">
+            <widget class="QLabel" name="label_24">
              <property name="text">
               <string>Шаг</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_12">
+            <widget class="QLabel" name="label_25">
              <property name="text">
               <string>Количество</string>
              </property>
@@ -297,23 +214,23 @@
           </layout>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
            <item>
-            <widget class="QLineEdit" name="lineEdit_9">
+            <widget class="QLineEdit" name="lineEdit9">
              <property name="text">
               <string/>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_10"/>
+            <widget class="QLineEdit" name="lineEdit10"/>
            </item>
           </layout>
          </item>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="pushButton5">
          <property name="text">
           <string>Построить спектр</string>
          </property>
@@ -322,18 +239,101 @@
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
+      <layout class="QVBoxLayout" name="verticalLayout_18">
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="pushButton6">
          <property name="text">
           <string>Сравнение методов</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pushButton4">
          <property name="text">
           <string>Очистить поле</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>22</y>
+      <width>261</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_19">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_20">
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Метод</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_21">
+         <item>
+          <widget class="QRadioButton" name="radioButton1">
+           <property name="text">
+            <string>Каноническое уравнение</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton2">
+           <property name="text">
+            <string>Параметрическое уравнение</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton3">
+           <property name="text">
+            <string>Алгоритм Брезенхема</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton4">
+           <property name="text">
+            <string>Алгоритм средней точки</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton5">
+           <property name="text">
+            <string>Библиотечная функция</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_22">
+       <item>
+        <widget class="QPushButton" name="pushButton1">
+         <property name="text">
+          <string>Цвет пера</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton2">
+         <property name="text">
+          <string>Цвет фона</string>
          </property>
         </widget>
        </item>
@@ -347,7 +347,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1458</width>
+     <width>1442</width>
      <height>22</height>
     </rect>
    </property>
