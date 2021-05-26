@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-05-19T13:40:08. -->
+<!-- Written by QtCreator 4.15.0, 2021-05-26T02:57:58. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -355,7 +355,7 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/vladimirprocenko/Desktop/build-lab04-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/private/var/folders/2r/18zxrp9101b1gq8mwwtmb2rh0000gn/T/QtCreator-hndfoP/qtc-cmake-hDukxnVe</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
