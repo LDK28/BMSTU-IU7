@@ -1,0 +1,9 @@
+@ECHO OFF
+CHCP 65001
+DEL *.out
+DEL *.o
+DEL *.exe
+DEL *.gcda
+DEL *.c.gcov
+DEL *.gcno
+DEL *.h.gcov
