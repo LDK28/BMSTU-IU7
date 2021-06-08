@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1855</width>
+    <height>1018</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="DrawLabel" name="drawLabel">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>0</y>
+      <width>1401</width>
+      <height>1001</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>431</width>
+      <height>811</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1" colspan="3">
+      <widget class="QSpinBox" name="y1addLineSpinBox">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="7">
+      <widget class="Line" name="line_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLabel" name="y2addLineTextLabel">
+       <property name="text">
+        <string>y2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QSpinBox" name="y2addLineSpinBox">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="y1setClipperTextLabel">
+       <property name="text">
+        <string>y1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="3">
+      <widget class="QSpinBox" name="y1setClipperSpinBox">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QLabel" name="x2setClipperTextLabel">
+       <property name="text">
+        <string>x2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="6">
+      <widget class="QSpinBox" name="x2setClipperSpinBox">
+       <property name="maximum">
+        <number>1200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QLabel" name="y2setClipperTextLabel">
+       <property name="text">
+        <string>y2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="6">
+      <widget class="QSpinBox" name="y2setClipperSpinBox">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="3">
+      <widget class="QLabel" name="lineBaseColorLabel">
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3" colspan="4">
+      <widget class="QPushButton" name="setLineBaseColorPushButton">
+       <property name="text">
+        <string>Цвет прямой</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="3">
+      <widget class="QLabel" name="clipperColorLabel">
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3" colspan="4">
+      <widget class="QPushButton" name="setClipperColorPushButton">
+       <property name="text">
+        <string>Цвет отсекателя</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="3">
+      <widget class="QLabel" name="clippedLineColorLabel">
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3" colspan="4">
+      <widget class="QPushButton" name="setClippedLineColorPushButton">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Цвет отсеченного отрезка</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="3">
+      <widget class="QSpinBox" name="x1setClipperSpinBox">
+       <property name="maximum">
+        <number>1200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4" rowspan="2">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="7">
+      <widget class="QPushButton" name="setClipperPushButton">
+       <property name="text">
+        <string>Установить отсекатель</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0" colspan="7">
+      <widget class="QPushButton" name="clipPushButton">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Отсечь</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="7">
+      <widget class="QPushButton" name="addLinePushButton">
+       <property name="text">
+        <string>Добавить прямую</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="y1addLineTextLabel">
+       <property name="text">
+        <string>y1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="3">
+      <widget class="QSpinBox" name="x1addLineSpinBox">
+       <property name="maximum">
+        <number>1200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0" colspan="7">
+      <widget class="QPushButton" name="clearPushButton">
+       <property name="text">
+        <string>Очистить холст</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="x2addLineTextLabel">
+       <property name="text">
+        <string>x2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QSpinBox" name="x2addLineSpinBox">
+       <property name="maximum">
+        <number>1200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="x1setClipperTextLabel">
+       <property name="text">
+        <string>x1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="x1addLineTextLabel">
+       <property name="text">
+        <string>x1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4" rowspan="2">
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="7">
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0" colspan="7">
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>DrawLabel</class>
+   <extends>QLabel</extends>
+   <header>drawlabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
