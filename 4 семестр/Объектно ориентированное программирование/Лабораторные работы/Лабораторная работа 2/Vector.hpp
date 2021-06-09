@@ -296,6 +296,21 @@ Vector<Type>& Vector<Type>::operator *=(const Type& mult)
 }
 
 template<typename Type>
+Vector<Type>& Vector<Type>::operator *(const Type& mult)
+{
+    time_t t_time = time(NULL);
+    if (num_elem < 0)
+        throw emptyError(__FILE__, typeid(*this).name(), __LINE__, ctime(&t_time));
+
+    Vector<Type> new_vector(*this);
+    Iterator<Type> iter(new_vector);
+    for (; iter; iter++)
+        *iter *= mult;
+
+    return new_vector;
+}
+
+template<typename Type>
 Vector<Type>& Vector<Type>::operator /=(const Type& div)
 {
     time_t t_time = time(NULL);
