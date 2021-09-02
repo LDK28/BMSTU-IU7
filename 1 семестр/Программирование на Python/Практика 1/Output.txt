@@ -1,0 +1,8 @@
+MOEILIJKHEDEN
+    Встреченные палиндромы: ILI EDE 
+VERNEDEREN
+    Встреченные палиндромы: EDE ERE 
+AMAMA
+    Встреченные палиндромы: AMA MAM 
+MUMMUM
+    Встреченные палиндромы: MUM UMMU 
