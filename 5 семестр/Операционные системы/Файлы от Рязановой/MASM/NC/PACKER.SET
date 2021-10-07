@@ -1,0 +1,172 @@
+#
+#	Compression configuration file for NC 4.5
+#
+#	Author 	: Anthony O'Dowd
+#	Date	: Jan '94
+#
+##############################################################################
+##
+#
+# The format of this file is as follows :-
+#
+#	<1> To define the start of a compression utilities command
+#	    lines use the : followed by a short descriptive piece of text.
+#	    This text is displayed on the Compression Method Selection Dialog box.
+#
+#	<2> To define the characteristics of a compression utility
+#           use a two digit number followed by a :. The two digits are 
+#	    significant as they define the type of command that the
+#	    compression utility supports.
+#
+#	The meaning of these numbers is as follows :-
+#
+#	00:     File extension of compressed file type
+#	01:	Command to add a file to a compressed file.
+#       02:	Command to add a file to a compressed file 
+#		and also store the file's full pathname.
+#	03:	Command to extract a file from a compressed file.
+#       04:     Command to extract a file from a compressed file 
+#		and maintain it's full pathname.
+#	05:	Command to move a file to a compressed file.
+#       06:	Command to move a file to a compressed file and 
+#		also store the files full pathname.
+#	07:	Command to delete a file from a compressed file.
+#	08:	Command to select the best compression method supported 
+#		by the compression utility.
+#	09:	Command to create the smallest compressed file.
+#	10:	Command to create a compressed file in the fastest possible time.
+#	11:	Trait Integer. This is a sixteen bit integer that defines
+#		some additional characteristics about the compression
+#		utility. The two most important bits in this number are :-
+#			bit 15...Set to one if the compression utility
+#				 supports the concept of response file. 
+#			bit 14...Set to one if you want to have an interactive
+#				 session with the compression utility. In this
+#				 mode Commander allows the compression utility 
+#				 display its progress on the screen on top 
+#				 of the Commander file panels. This can be
+#				 useful in debugging the switches on
+#				 the compression utilities.
+#	12:	If the Trait Integer bit 15 is set to 1 this is the definition
+#		of the character that must precede the response filename.
+#	13:     This defines the mapping of the compression error codes to the
+#		codes that Commander understands. This is for error checking and
+#		reporting.
+#
+#		The error codes handled by Norton Commander are :-
+#
+#		0.....No error
+#		7.....Illegal Compression utility used that Commander can understand
+#		8.....Compression utility not defined in Packer.set
+#		9.....Not enough memory to run compression utility
+#	       10.....Cannot find the compression utility. ( It must be on the path for Commander 
+to find it.)
+#	       11.....Cannot locate Command.com to load compression utility
+#	       12.....Cannot find the compression utility. ( It must be on the path for Commander 
+#		      to find it.)
+#	       13.....Cannot find the PACKER.SET file 
+#	       14.....Cannot open the response file
+#	       15.....Not enough parameters specified on command line.
+#
+##############################################################################
+##
+#
+:PKZIP 1.x/2.x
+00:ZIP
+01:pkzip -u -wHS
+02:pkzip -u -P -wHS
+03:pkunzip -o
+04:pkunzip -o -d
+05:pkzip -mu -wHS
+06:pkzip -mu -P -wHS
+07:pkzip -d
+08:-es
+09:-ex
+10:-ex
+11:01
+12:@
+#
+# This defines the mapping of error codes for pkzip to
+# the standard error codes that Commander understands.
+#
+13:14,3;1,1;16,4;13,2;11,6
+:ARJ
+00:ARJ
+01:arj u -y 
+02:arj u -y 
+03:arj e -y -e 
+04:arj x -y 
+05:arj m -y -d -e 
+06:arj m -y -d 
+07:arj d -y
+08:-m4 
+09:-m1 
+10:-m1
+11:01
+12:!
+13:6,1;1,2;5,3;7,4;96,1
+:ARC
+00:ARC
+01:arc a
+02:arc a
+03:arc eow
+04:arc xow
+05:arc muw
+06:arc muwz
+07:arc dw
+08:
+09:
+10:
+11:00
+12:@
+13:255,5
+:PAK
+00:PAK
+01:pak u
+02:pak u 
+03:pak e -wa
+04:pak e -i -wa
+05:pak m -wa
+06:pak m -wa -i
+07:pak d -wa
+08:/C 
+09:/CR
+10:/S
+11:01
+12:@
+13:1;6
+:ZOO
+00:ZOO
+01:zoo -add
+02:zoo -add 
+03:zoo -extract 
+04:zoo -extract
+05:zoo -move
+06:zoo -move
+07:zoo -delete
+08: 
+09:
+10:
+11:00
+12:@
+13:1;6
+:LHARC
+00:LHZ
+01:lharc u -am
+02:lharc a -apm
+03:lharc e -wm 
+04:lharc e -wm 
+05:lharc m -am
+06:lharc m -am 
+07:lharc d -mm 
+08:
+09:
+10:
+11:00
+12:
+13:1;6
+
+
+
+ 
+
