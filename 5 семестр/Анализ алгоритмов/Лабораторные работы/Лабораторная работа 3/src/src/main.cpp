@@ -33,8 +33,8 @@ double checkTime(Array<Type> &a, int (*cmp)(Type, Type), void (Array<Type>::*sor
     for (int i = 0; i < 100; i++) {
         for (size_t i = 0; i < a.getLength(); i++)
             // a[i] = i;
-            //a[i] = a.getLength() - i; 
-            a[i] = rand() % 1000 - 500;
+            a[i] = a.getLength() - i; 
+            // a[i] = rand() % 1000 - 500;
         gettimeofday(&tv_start, NULL);
         (a.*sort)(cmp);
         gettimeofday(&tv_stop, NULL);
