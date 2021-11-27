@@ -31,6 +31,8 @@ CREATE TABLE judgement(
     FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
 
+
+-- Доп. задание
 CREATE TABLE cases(
     id SERIAL PRIMARY KEY NOT NULL,
     court_case_id INTEGER NOT NULL,
