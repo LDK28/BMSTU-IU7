@@ -7,7 +7,7 @@ INTO tmp_lawyers
 FROM lawyers
 WHERE skill > 11;
 
-CREATE OR REPLACE PROCEDURE insert_max_skills()
+CREATE OR REPLACE PROCEDURE insert_min_skills()
 AS
 $BODY$
 DECLARE
@@ -37,4 +37,4 @@ END;
 $BODY$
 LANGUAGE plpgsql;
 
-call insert_max_skills();
+call insert_min_skills();
