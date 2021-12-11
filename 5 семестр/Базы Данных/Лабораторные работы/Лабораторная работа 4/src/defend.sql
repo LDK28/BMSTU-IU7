@@ -19,7 +19,7 @@
 -- $$
 -- LANGUAGE plpgsql;
 
--- Задача: переделать под CLR
+-- ЗАЩИТА: переделать под CLR
 CREATE OR REPLACE PROCEDURE add_lawyer (   name VARCHAR, 
                                            email_address VARCHAR, 
                                            phone_number VARCHAR, 
