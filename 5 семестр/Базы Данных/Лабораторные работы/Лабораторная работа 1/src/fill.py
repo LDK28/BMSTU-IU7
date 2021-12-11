@@ -48,7 +48,7 @@ article_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabit
 
 try:
     connection = psycopg2.connect(user="postgres",
-                                  password="281001",  # Your PostgreSQL passward
+                                  password="****",  # Your PostgreSQL passward
                                   host="localhost",  # Your DB host
                                   port="5432",  # Your PostgreSQL port
                                   database="lab_1")
