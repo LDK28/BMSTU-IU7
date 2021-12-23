@@ -56,3 +56,7 @@ dkms.conf
 *Desktop_Qt_6_1_0_MinGW_64_bit-Debug
 *Desktop_Qt_5_15_2_MinGW_64_bit-Debug
 *.stash
+
+# PyCharm cache
+*.idea
+__pycache__
