@@ -16,7 +16,7 @@
 #define DIFF 4//000
 
 
-HANDLE mutex1, mutex2;
+HANDLE mutex;
 HANDLE can_read;
 HANDLE can_write;
 
@@ -30,7 +30,7 @@ static int value = 0;
 void start_read(void) 
 {
 	InterlockedIncrement(&waiting_readers);
-	WaitForSingleObject(mutex1, INFINITE);
+	WaitForSingleObject(can_read, INFINITE);
 
 	if (waiting_readers || (WaitForSingleObject(can_write, 0) == WAIT_OBJECT_0))
 		WaitForSingleObject(can_read, INFINITE);
@@ -39,7 +39,7 @@ void start_read(void)
 	InterlockedIncrement(&active_readers);
 
 	SetEvent(can_read);
-	ReleaseMutex(mutex1);
+	ReleaseMutex(mutex);
 }
 
 void stop_read(void) 
@@ -72,7 +72,7 @@ DWORD WINAPI reader(CONST LPVOID lpParams)
 void start_write(void) 
 {
 	InterlockedIncrement(&waiting_writers);
-	WaitForSingleObject(mutex2, INFINITE);
+	WaitForSingleObject(mutex, INFINITE);
 
 	if (active_writer == 1 || active_readers > 0)
 		WaitForSingleObject(can_write, INFINITE);
@@ -80,7 +80,8 @@ void start_write(void)
 	InterlockedDecrement(&waiting_writers);
 	active_writer = 1;
 
-	ReleaseMutex(mutex2);
+	// ReleaseMutex анлочит ранее залоченный мьютекс
+	ReleaseMutex(mutex);
 }
 
 void stop_write(void) 
@@ -116,7 +117,7 @@ int main(void)
 	HANDLE writers_threads[WRITERS_CNT];
 	HANDLE readers_threads[READERS_CNT];
 
-	if ((mutex1 = CreateMutex(NULL, 0, NULL)) == NULL || (mutex2 = CreateMutex(NULL, 0, NULL)) == NULL) 
+	if ((mutex = CreateMutex(NULL, 0, NULL)) == NULL) 
 	{
 		perror("CreateMutex error.\n");
 		return GetLastError();
@@ -149,7 +150,7 @@ int main(void)
 	WaitForMultipleObjects(READERS_CNT, readers_threads, 1, INFINITE);
 	WaitForMultipleObjects(WRITERS_CNT, writers_threads, 1, INFINITE);
 
-	CloseHandle(mutex1);
+	CloseHandle(mutex);
 	CloseHandle(can_read);
 	CloseHandle(can_write);
 
