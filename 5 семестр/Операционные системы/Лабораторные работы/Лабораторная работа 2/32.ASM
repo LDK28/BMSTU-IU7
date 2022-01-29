@@ -39,7 +39,7 @@ assume cs:pm_seg
     dd ?
 
     ; Селекторы сегментов
-    sel_data        equ 8
+    sel_data        equ 8  
     sel_code16      equ 16
     sel_code32      equ 24
     sel_data32      equ 32
