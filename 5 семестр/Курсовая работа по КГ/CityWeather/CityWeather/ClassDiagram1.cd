@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CityWeather.Colors">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Colors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Fog">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Fog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Form1" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cFAIACApFCAI/hgQAECIEIEiFUAxAAAdJPgMyABCCAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.LightSource">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Light.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Model">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAACKAAIAAAEQACAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Polygon">
+    <Position X="14" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAEAAAAAAAAgAAIIBAACAABAAAAQAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Point3D">
+    <Position X="12" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Vector">
+    <Position X="14" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAwAAAAAABEAAABAAAAAACAAAAABgAQAAgAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Program">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Drop">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQIIAAAAAAAEgABAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>Rain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.ParticleSystem">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABEAAACAAAAIACAAAAAAAAgAAAAEAAAAAAgAAAAAgA=</HashCode>
+      <FileName>Rain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Scene">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAQCAAAAAAIAAAIAgQAAAAAgAAAAAAACAAAA=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Transformation">
+    <Position X="17" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAWAAAAAAAAAAAAAAIABwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Zbuffer">
+    <Position X="17" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEABAQAABAEMAAAAIAAIAAQAQAAAAAAAAEAAQQMQCA=</HashCode>
+      <FileName>Zbuffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAEAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CityWeather.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

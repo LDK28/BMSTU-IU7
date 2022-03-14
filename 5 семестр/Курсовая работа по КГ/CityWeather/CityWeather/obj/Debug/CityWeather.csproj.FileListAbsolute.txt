@@ -1,0 +1,10 @@
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\bin\Debug\CityWeather.exe.config
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\bin\Debug\CityWeather.exe
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\bin\Debug\CityWeather.pdb
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.csproj.AssemblyReference.cache
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.Form1.resources
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.Properties.Resources.resources
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.csproj.GenerateResource.cache
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.exe
+C:\Users\1\Desktop\bmstu_CG_CP\CityWeather\CityWeather\obj\Debug\CityWeather.pdb
