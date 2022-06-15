@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ldk/Рабочий стол/BMSTU-IU7/6 семестр/Операционные системы/Лабораторные работы/Лабораторная работа 3'
+make: Leaving directory '/home/ldk/Рабочий стол/BMSTU-IU7/6 семестр/Операционные системы/Лабораторные работы/Лабораторная работа 3'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

@@ -1,0 +1,237 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[14pt]{extsizes}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{indentfirst}
+\usepackage{eucal}
+\usepackage{enumitem}
+%s\documentclass[openany]{book}
+\frenchspacing
+
+\usepackage{array}
+
+\usepackage{verbatim}
+
+\usepackage{caption}
+\captionsetup{labelsep=endash}
+\captionsetup[figure]{name={Рисунок}}
+
+\usepackage{indentfirst} % Красная строка
+
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage{amsmath}
+
+
+% Для листинга кода:
+\lstset{ %
+	language=c,                 % выбор языка для подсветки (здесь это С)
+	basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+	numbers=left,               % где поставить нумерацию строк (слева\справа)
+	numberstyle=\tiny,           % размер шрифта для номеров строк
+	stepnumber=1,                   % размер шага между двумя номерами строк
+	numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+	showspaces=false,            % показывать или нет пробелы специальными отступами
+	showstringspaces=false,      % показывать или нет пробелы в строках
+	showtabs=false,             % показывать или нет табуляцию в строках
+	frame=single,              % рисовать рамку вокруг кода
+	tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+	captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+	breaklines=true,           % автоматически переносить строки (да\нет)
+	breakatwhitespace=false, % переносить строки только если есть пробел
+	escapeinside={\#*}{*)}   % если нужно добавить комментарии в коде
+}
+
+
+\usepackage[left=2cm,right=2cm, top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+% Для измененных титулов глав:
+\usepackage{titlesec, blindtext, color} % подключаем нужные пакеты
+\definecolor{gray75}{gray}{0.75} % определяем цвет
+\newcommand{\hsp}{\hspace{20pt}} % длина линии в 20pt
+% titleformat определяет стиль
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+
+% plot
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\begin{document}
+	%\def\chaptername{} % убирает "Глава"
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\noindent \begin{minipage}{0.15\textwidth}
+			\includegraphics[width=\linewidth]{inc/b_logo}
+		\end{minipage}
+		\noindent\begin{minipage}{0.9\textwidth}\centering
+			\textbf{Министерство науки и высшего образования Российской Федерации}\\
+			\textbf{Федеральное государственное бюджетное образовательное учреждение высшего образования}\\
+			\textbf{~~~«Московский государственный технический университет имени Н.Э.~Баумана}\\
+			\textbf{(национальный исследовательский университет)»}\\
+			\textbf{(МГТУ им. Н.Э.~Баумана)}
+		\end{minipage}
+		
+		\noindent\rule{18cm}{3pt}
+		\newline\newline
+		\noindent ФАКУЛЬТЕТ $\underline{\text{«Информатика и системы управления»}}$ \newline\newline
+		\noindent КАФЕДРА $\underline{\text{«Программное обеспечение ЭВМ и информационные технологии»}}$\newline\newline\newline\newline\newline
+		
+		\begin{center}
+			\noindent\begin{minipage}{1.1\textwidth}\centering
+				\Large\textbf{Отчет по лабораторной работе №6}\newline
+				\textbf{по дисциплине <<Операционные системы>>}\newline\newline
+			\end{minipage}
+		\end{center}
+		
+		\noindent\textbf{Тема} $\underline{\text{Системный вызов \texttt{open}}}$\newline\newline
+		\noindent\textbf{Студент} $\underline{\text{Костев Д.И}}$\newline\newline
+		\noindent\textbf{Группа} $\underline{\text{ИУ7-61Б}}$\newline\newline
+		\noindent\textbf{Оценка (баллы)} $\underline{\text{~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Преподаватель} $\underline{\text{Рязанова Н.Ю.}}$\newline\newline\newline
+		
+		\begin{center}
+			\vfill
+			Москва~---~\the\year
+			~г.
+		\end{center}
+	\end{titlepage}
+
+\section*{Используемые структуры}
+
+\begin{lstinputlisting}[
+	caption={Структура \texttt{filename}},
+	]{./src/filename.h}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Структура \texttt{open\_flags}},
+	]{./src/open_flags.h}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Структура \texttt{nameidata}},
+	]{./src/nameidata.h}
+\end{lstinputlisting}
+
+\section*{Флаги системного вызова \texttt{open()}}
+
+\texttt{O\_EXEC} --- открыть только для выполнения (результат не определен, при открытии директории).
+
+\texttt{O\_RDONLY} --- открыть только на чтение.
+
+\texttt{O\_RDWR} --- открыть на чтение и запись.
+
+\texttt{O\_SEARCH} --- открыть директорию только для поиска (результат не определен, при использовании с файлами, не являющимися директорией).
+
+\texttt{O\_WRONLY} --- открыть только на запись.
+
+\texttt{O\_APPEND} --- файл открывается в режиме добавления, перед каждой операцией записи файловый указатель будет устанавливаться в конец файла.
+
+\texttt{O\_CLOEXEC} --- включает флаг \texttt{close-on-exec} для нового файлового дескриптора, указание этого флага позволяет программе избегать дополнительных операций \texttt{fcntl} \texttt{F\_SETFD} для установки флага \texttt{FD\_CLOEXEC}.
+
+\texttt{O\_CREAT} --- если файл не существует, то он будет создан.
+
+\texttt{O\_DIRECTORY} --- если файл не является каталогом, то open вернёт ошибку.
+
+\texttt{O\_DSYNC} --- файл открывается в режиме синхронного ввода-вывода (все операции записи для соответствующего дескриптора файла блокируют вызывающий процесс до тех пор, пока данные не будут физически записаны).
+
+\texttt{O\_EXCL} --- если используется совместно с \texttt{O\_CREAT}, то при наличии уже созданного файла вызов завершится ошибкой.
+
+\texttt{O\_NOCTTY} --- если файл указывает на терминальное устройство, то оно не станет терминалом управления процесса, даже при его отсутствии.
+
+\texttt{O\_NOFOLLOW} --- если файл является символической ссылкой, то open вернёт ошибку.
+
+\texttt{O\_NONBLOCK} --- файл открывается, по возможности, в режиме \texttt{non-blocking}, то есть никакие последующие операции над дескриптором файла не заставляют в дальнейшем вызывающий процесс ждать.
+
+\texttt{O\_RSYNC} --- операции записи должны выполняться на том же уровне, что и \texttt{O\_SYNC}.
+
+\texttt{O\_SYNC} --- файл открывается в режиме синхронного ввода-вывода (все операции записи для соответствующего дескриптора файла блокируют вызывающий процесс до тех пор, пока данные не будут физически записаны).
+
+\texttt{O\_TRUNC} --- если файл уже существует, он является обычным файлом и заданный режим позволяет записывать в этот файл, то его длина будет урезана до нуля.
+
+\texttt{O\_LARGEFILE} --- позволяет открывать файлы, размер которых не может быть представлен типом \texttt{off\_t }(\texttt{long}).
+
+\texttt{O\_TMPFILE} --- при наличии данного флага создаётся неименованный временный файл.
+
+\newpage
+
+\section*{Схемы}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{inc/open.pdf}
+	\caption{Схема работы функции open}
+	\label{fig:open}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=250pt]{inc/build_open_flags.pdf}
+	\caption{Схема работы функции build\_open\_flags}
+	\label{fig:build_open_flags}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=\textwidth]{inc/getname_flags.pdf}
+	\caption{Схема работы функции getname\_flags}
+	\label{fig:getname_flags}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=\textwidth]{inc/alloc_fd.pdf}
+	\caption{Схема работы функции alloc\_fd}
+	\label{fig:alloc_fd}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{inc/path_openat.pdf}
+	\caption{Схема работы функции path\_openat}
+	\label{fig:path_openat}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=400pt]{inc/open_last_lookups.pdf}
+	\caption{Схема работы функции open\_last\_lookups}
+	\label{fig:open_last_lookups}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{inc/lookup_open.pdf}
+	\caption{Схема работы функции lookup\_open}
+	\label{fig:lookup_open}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=0.35\textwidth]{inc/set_nameidata.pdf}
+	\caption{Схема работы функции set\_nameidata}
+	\label{fig:set_nameidata}	
+\end{figure}
+
+\begin{figure}[h!btp]
+	\centering
+	\includegraphics[width=0.35\textwidth]{inc/restore_nameidata.pdf}
+	\caption{Схема работы функции restore\_nameidata}
+	\label{fig:restore_nameidata}	
+\end{figure}
+
+
+\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
+\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
+	
+\end{document}
