@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ldk/Рабочий стол/lab8_os'
+make: Leaving directory '/home/ldk/Рабочий стол/lab8_os'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
